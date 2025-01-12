@@ -28,7 +28,8 @@ def paste_text(images_path, font_name, output_path):
             w, h = size_img(image)
 
             draw.text((0, (h-(font.size*2))), 'World of Magic', font=font, fill='#DDF2EE')
-            image_path.show()
+            #image_path.show()
+            image_path.save(f'{output_path}/{img}')
 
 def paste_logo(images_path, logo, output_path):
     if not exists(output_path):
