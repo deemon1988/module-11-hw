@@ -1,8 +1,14 @@
 import telebot
 from telebot.types import ReplyKeyboardMarkup, KeyboardButton
 
-# Вставьте ваш токен
-API_TOKEN = '7810014291:AAGFYOO3Ed9_F86T2H4yShgt1RDdMBl1kWQ'
+import os
+from dotenv import load_dotenv
+
+
+load_dotenv()
+#Telegram API токен
+API_TOKEN = os.getenv('API_TOKEN')
+
 bot = telebot.TeleBot(API_TOKEN)
 
 # Список напитков
